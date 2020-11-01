@@ -3,6 +3,7 @@ package com.kams.multiplecriteria.entities;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import java.util.Date;
 
 @Entity
 public class Employee {
@@ -11,6 +12,8 @@ public class Employee {
 private Long id;
 private String name;
 private String role;
+private Date birtdate;
+private Integer edad;
 @ManyToOne
 private Enterprise enterprise;
 
@@ -44,5 +47,21 @@ private Enterprise enterprise;
 
     public void setEnterprise(Enterprise enterprise) {
         this.enterprise = enterprise;
+    }
+
+    public Date getBirtdate() {
+        return birtdate;
+    }
+
+    public void setBirtdate(Date birtdate) {
+        this.birtdate = birtdate;
+    }
+
+    public Integer getEdad() {
+        return edad;
+    }
+
+    public void setEdad(Integer edad) {
+        this.edad = edad;
     }
 }
